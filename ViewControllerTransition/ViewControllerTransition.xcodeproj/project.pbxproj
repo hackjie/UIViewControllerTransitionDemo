@@ -12,6 +12,9 @@
 		6A5A48902230CB0500FF02BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A5A488E2230CB0500FF02BB /* Main.storyboard */; };
 		6A5A48922230CB0600FF02BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A5A48912230CB0600FF02BB /* Assets.xcassets */; };
 		6A5A48952230CB0600FF02BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A5A48932230CB0600FF02BB /* LaunchScreen.storyboard */; };
+		6AC101982231245700A9ECFC /* LJNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC101972231245700A9ECFC /* LJNavigationDelegate.swift */; };
+		6AC1019A2231269700A9ECFC /* LJNavigationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC101992231269700A9ECFC /* LJNavigationAnimator.swift */; };
+		6AC1019C223127CB00A9ECFC /* LJPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC1019B223127CB00A9ECFC /* LJPopViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		6A5A48912230CB0600FF02BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A5A48942230CB0600FF02BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A5A48962230CB0600FF02BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AC101972231245700A9ECFC /* LJNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJNavigationDelegate.swift; sourceTree = "<group>"; };
+		6AC101992231269700A9ECFC /* LJNavigationAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJNavigationAnimator.swift; sourceTree = "<group>"; };
+		6AC1019B223127CB00A9ECFC /* LJPopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJPopViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 		6A5A48892230CB0500FF02BB /* ViewControllerTransition */ = {
 			isa = PBXGroup;
 			children = (
+				6AC10193223122C000A9ECFC /* pushAndPop */,
 				6A5A488A2230CB0500FF02BB /* AppDelegate.swift */,
 				6A5A488C2230CB0500FF02BB /* ViewController.swift */,
 				6A5A488E2230CB0500FF02BB /* Main.storyboard */,
@@ -62,6 +69,16 @@
 				6A5A48962230CB0600FF02BB /* Info.plist */,
 			);
 			path = ViewControllerTransition;
+			sourceTree = "<group>";
+		};
+		6AC10193223122C000A9ECFC /* pushAndPop */ = {
+			isa = PBXGroup;
+			children = (
+				6AC101972231245700A9ECFC /* LJNavigationDelegate.swift */,
+				6AC101992231269700A9ECFC /* LJNavigationAnimator.swift */,
+				6AC1019B223127CB00A9ECFC /* LJPopViewController.swift */,
+			);
+			path = pushAndPop;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +113,7 @@
 				TargetAttributes = {
 					6A5A48862230CB0500FF02BB = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -136,7 +154,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A5A488D2230CB0500FF02BB /* ViewController.swift in Sources */,
+				6AC1019C223127CB00A9ECFC /* LJPopViewController.swift in Sources */,
 				6A5A488B2230CB0500FF02BB /* AppDelegate.swift in Sources */,
+				6AC1019A2231269700A9ECFC /* LJNavigationAnimator.swift in Sources */,
+				6AC101982231245700A9ECFC /* LJNavigationDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +303,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ViewControllerTransition/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -290,6 +312,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = come.hackjie.ViewControllerTransition;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -299,6 +322,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ViewControllerTransition/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

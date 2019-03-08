@@ -16,6 +16,8 @@
 		6AC1019A2231269700A9ECFC /* LJNavigationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC101992231269700A9ECFC /* LJNavigationAnimator.swift */; };
 		6AC1019C223127CB00A9ECFC /* LJPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC1019B223127CB00A9ECFC /* LJPopViewController.swift */; };
 		6AE903F822324D89008D4C75 /* LJPopGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE903F722324D89008D4C75 /* LJPopGestureViewController.swift */; };
+		6AE903FB22326453008D4C75 /* LJPresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE903FA22326453008D4C75 /* LJPresentViewController.swift */; };
+		6AE903FD223264A7008D4C75 /* LJPresentAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE903FC223264A7008D4C75 /* LJPresentAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		6AC101992231269700A9ECFC /* LJNavigationAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJNavigationAnimator.swift; sourceTree = "<group>"; };
 		6AC1019B223127CB00A9ECFC /* LJPopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJPopViewController.swift; sourceTree = "<group>"; };
 		6AE903F722324D89008D4C75 /* LJPopGestureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJPopGestureViewController.swift; sourceTree = "<group>"; };
+		6AE903FA22326453008D4C75 /* LJPresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJPresentViewController.swift; sourceTree = "<group>"; };
+		6AE903FC223264A7008D4C75 /* LJPresentAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJPresentAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 		6A5A48892230CB0500FF02BB /* ViewControllerTransition */ = {
 			isa = PBXGroup;
 			children = (
+				6AE903F92232642F008D4C75 /* presentAndDismiss */,
 				6AC10193223122C000A9ECFC /* pushAndPop */,
 				6A5A488A2230CB0500FF02BB /* AppDelegate.swift */,
 				6A5A488C2230CB0500FF02BB /* ViewController.swift */,
@@ -82,6 +87,15 @@
 				6AE903F722324D89008D4C75 /* LJPopGestureViewController.swift */,
 			);
 			path = pushAndPop;
+			sourceTree = "<group>";
+		};
+		6AE903F92232642F008D4C75 /* presentAndDismiss */ = {
+			isa = PBXGroup;
+			children = (
+				6AE903FA22326453008D4C75 /* LJPresentViewController.swift */,
+				6AE903FC223264A7008D4C75 /* LJPresentAnimator.swift */,
+			);
+			path = presentAndDismiss;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,7 +174,9 @@
 				6AC1019C223127CB00A9ECFC /* LJPopViewController.swift in Sources */,
 				6A5A488B2230CB0500FF02BB /* AppDelegate.swift in Sources */,
 				6AC1019A2231269700A9ECFC /* LJNavigationAnimator.swift in Sources */,
+				6AE903FD223264A7008D4C75 /* LJPresentAnimator.swift in Sources */,
 				6AE903F822324D89008D4C75 /* LJPopGestureViewController.swift in Sources */,
+				6AE903FB22326453008D4C75 /* LJPresentViewController.swift in Sources */,
 				6AC101982231245700A9ECFC /* LJNavigationDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

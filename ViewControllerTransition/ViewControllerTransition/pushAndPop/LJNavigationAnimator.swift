@@ -37,14 +37,14 @@ class LJNavigationAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         var translation = containerView.frame.width
         var toViewTransform = CGAffineTransform.identity
         var fromViewTransform = CGAffineTransform.identity
-        
+
         translation = (transitionType == .push ? translation : -translation)
-        
+
         toViewTransform = CGAffineTransform(translationX: translation, y: 0)
         fromViewTransform = CGAffineTransform(translationX: -translation, y: 0)
-        
+
         containerView.addSubview(toView)
-        
+
         toView.transform = toViewTransform
         UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
             fromView.transform = fromViewTransform
@@ -55,5 +55,12 @@ class LJNavigationAnimator: NSObject, UIViewControllerAnimatedTransitioning {
             toView.transform = CGAffineTransform.identity
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         })
+        
+//        UIView.transition(from: fromView,
+//                          to: toView,
+//                          duration: transitionDuration(using: transitionContext),
+//                          options: .transitionFlipFromRight) { _ in
+//            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+//        }
     }
 }

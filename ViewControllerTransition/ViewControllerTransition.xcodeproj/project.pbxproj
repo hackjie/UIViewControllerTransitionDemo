@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A1744832232683D003369E0 /* LJModalTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1744822232683D003369E0 /* LJModalTransitionDelegate.swift */; };
 		6A5A488B2230CB0500FF02BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5A488A2230CB0500FF02BB /* AppDelegate.swift */; };
 		6A5A488D2230CB0500FF02BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5A488C2230CB0500FF02BB /* ViewController.swift */; };
 		6A5A48902230CB0500FF02BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A5A488E2230CB0500FF02BB /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A1744822232683D003369E0 /* LJModalTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LJModalTransitionDelegate.swift; sourceTree = "<group>"; };
 		6A5A48872230CB0500FF02BB /* ViewControllerTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewControllerTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A5A488A2230CB0500FF02BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A5A488C2230CB0500FF02BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			children = (
 				6AE903FA22326453008D4C75 /* LJPresentViewController.swift */,
 				6AE903FC223264A7008D4C75 /* LJPresentAnimator.swift */,
+				6A1744822232683D003369E0 /* LJModalTransitionDelegate.swift */,
 			);
 			path = presentAndDismiss;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A1744832232683D003369E0 /* LJModalTransitionDelegate.swift in Sources */,
 				6A5A488D2230CB0500FF02BB /* ViewController.swift in Sources */,
 				6AC1019C223127CB00A9ECFC /* LJPopViewController.swift in Sources */,
 				6A5A488B2230CB0500FF02BB /* AppDelegate.swift in Sources */,

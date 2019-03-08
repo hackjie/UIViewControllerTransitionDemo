@@ -16,5 +16,15 @@ class LJPresentViewController: UIViewController {
         // Do any additional setup after loading the view.
         navigationItem.title = "Present VC"
         view.backgroundColor = UIColor.blue
+        
+        let dismissBtn = UIButton(frame: CGRect(x: 40, y: 100, width: 80, height: 40))
+        dismissBtn.setTitle("dismiss", for: UIControl.State.normal)
+        dismissBtn.backgroundColor = UIColor.red
+        dismissBtn.addTarget(self, action: #selector(dismissVC), for: UIControl.Event.touchUpInside)
+        view.addSubview(dismissBtn)
+    }
+    
+    @objc func dismissVC() {
+        self.dismiss(animated: true, completion: nil)
     }
 }

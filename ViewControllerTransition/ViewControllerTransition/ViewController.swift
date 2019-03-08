@@ -12,7 +12,9 @@ class ViewController: UITableViewController {
     let titles = ["push pop no interactive",
                   "push pop with interactive",
                   "present dismiss"]
-    let viewControllers = [LJPopViewController(), LJPopGestureViewController()]
+    let viewControllers = [LJPopViewController(), LJPopGestureViewController(), LJPresentViewController()]
+    
+    let modalDelegate = LJModalTransitionDelegate()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +42,12 @@ extension ViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let viewController = viewControllers[indexPath.row]
-        navigationController?.pushViewController(viewController, animated: true)
+        if indexPath.row == 2 {
+            viewController.transitioningDelegate = modalDelegate
+            viewController.modalPresentationStyle = .custom
+            self.present(viewController, animated: true, completion: nil)
+        } else {
+            navigationController?.pushViewController(viewController, animated: true)
+        }
     }
 }

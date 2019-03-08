@@ -9,7 +9,17 @@
 import UIKit
 
 class LJNavigationDelegate: NSObject, UINavigationControllerDelegate {
+    
+    var interactive = false
+    let interactionTransition = UIPercentDrivenInteractiveTransition()
+    
+    /// 返回转场动画对象
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return LJNavigationAnimator(type: operation)
+    }
+    
+    /// 转场有交互的时候需要
+    func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        return interactive ? self.interactionTransition : nil
     }
 }

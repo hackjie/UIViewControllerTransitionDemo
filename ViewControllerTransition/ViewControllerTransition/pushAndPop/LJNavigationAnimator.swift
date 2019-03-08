@@ -17,7 +17,7 @@ class LJNavigationAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     }
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 3
+        return 1
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -50,6 +50,7 @@ class LJNavigationAnimator: NSObject, UIViewControllerAnimatedTransitioning {
             fromView.transform = fromViewTransform
             toView.transform = CGAffineTransform.identity
         }, completion: { finished in
+            // notice all back identity
             fromView.transform = CGAffineTransform.identity
             toView.transform = CGAffineTransform.identity
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)

@@ -9,13 +9,16 @@
 import UIKit
 
 class ViewController: UITableViewController {
-    let titles = ["push AND pop", "present AND dismiss"]
-    let viewControllers = [LJPopViewController()]
+    let titles = ["push pop no interactive",
+                  "push pop with interactive",
+                  "present dismiss"]
+    let viewControllers = [LJPopViewController(), LJPopGestureViewController()]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
+        navigationItem.title = "Home"
     }
 }
 

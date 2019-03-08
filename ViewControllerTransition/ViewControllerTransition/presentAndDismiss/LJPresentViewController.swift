@@ -10,21 +10,34 @@ import UIKit
 
 class LJPresentViewController: UIViewController {
 
+    lazy var dismissBtn: UIButton = {
+        let btn = UIButton(frame: CGRect(x: 40, y: 100, width: 80, height: 40))
+        btn.setTitle("dismiss", for: UIControl.State.normal)
+        btn.backgroundColor = UIColor.red
+        btn.addTarget(self, action: #selector(dismissVC), for: UIControl.Event.touchUpInside)
+        return btn
+    }()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        dismissBtn.addTarget(self, action: #selector(dismissVC), for: UIControl.Event.touchUpInside)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            self.view.addSubview(self.dismissBtn)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         navigationItem.title = "Present VC"
         view.backgroundColor = UIColor.blue
-        
-        let dismissBtn = UIButton(frame: CGRect(x: 40, y: 100, width: 80, height: 40))
-        dismissBtn.setTitle("dismiss", for: UIControl.State.normal)
-        dismissBtn.backgroundColor = UIColor.red
-        dismissBtn.addTarget(self, action: #selector(dismissVC), for: UIControl.Event.touchUpInside)
-        view.addSubview(dismissBtn)
     }
     
     @objc func dismissVC() {
-        self.dismiss(animated: true, completion: nil)
+        UIView.animate(withDuration: 0.4, animations: {
+            self.dismissBtn.removeFromSuperview()
+        }) { _ in
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }
